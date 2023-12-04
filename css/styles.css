@@ -1,0 +1,379 @@
+:root {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #bad4aa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body * + * {
+  margin-top: 1em;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  padding-bottom: 1em;
+}
+
+/*Parent*/
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.25em;
+}
+
+.site-nav > li {
+  /*Selects the child li element of the .site-nav parent*/
+  display: flex;
+  font-size: 1.5em;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+.site-nav > li > a {
+  /*Selects the child a element of the child li element of the .site-nav parent*/
+  display: block;
+  padding: 0.5em 1em;
+  background-color: #ebf5df;
+  color: #222222;
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+
+.site-nav a:hover {
+  background-color: #fafafa;
+}
+
+main {
+  padding: 1em 1em;
+  margin: 0 auto;
+}
+
+h1 /*The h1, h2, h3, and h4 tags have all been styled to specific criteria*/ {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  text-align: center;
+  margin: auto;
+  padding: 0.75em 0 0.75em 0;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  padding: 1;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  padding-bottom: 1em;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  padding: 2.5px;
+  margin: 5px;
+}
+
+.explain {
+  width: 80%;
+  height: auto;
+  background-color: #ebf5df;
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+.explain > p {
+  padding-bottom: 1em;
+}
+
+#example-container {
+  display: flex;
+  width: 95%;
+  height: 25em;
+  margin: 0 auto;
+  background-color: #fafafa;
+  border: 5px solid #222222;
+  align-content: center;
+  align-items: center;
+}
+
+/* Contact Button and Form */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+ul li {
+  list-style: none;
+}
+
+ul {
+  display: inline-block;
+}
+
+#contact {
+  background: #fafafa;
+  position: relative;
+  width: 30em;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 5px 10px #222222;
+}
+.js #contact {
+  position: absolute;
+  top: 3em;
+  display: none;
+  left: 0;
+  right: 0;
+}
+
+input {
+  border: 0;
+  margin: 1em 40px;
+  width: 25em;
+  padding: 1em;
+  border-bottom: 2px solid #222222;
+  background: none;
+  display: block;
+  color: #222222;
+}
+
+/*prettier-ignore*/
+input[type=submit] {
+  width: 15em;
+  border-radius: .25em;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+textarea {
+  border: 0;
+  width: 25em;
+  height: 200px;
+  display: block;
+  margin-left: 40px;
+  background: none;
+  padding: 1em;
+  border-bottom: 2px solid #222222;
+  color: #222222;
+  resize: none;
+}
+
+#submit {
+  margin: 2em auto;
+  border: 2px solid #222222;
+  color: #222222;
+  font-size: 20px;
+}
+
+#submit:hover {
+  background-color: #ebf5df;
+}
+.button-container {
+  display: block;
+  margin: 0 auto;
+}
+.btn {
+  padding: 0.5em;
+  border: 2px solid #252525;
+  border-radius: 0.25em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #222222;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: ease all 0.3s;
+  display: block;
+}
+
+.btn:hover {
+  background: #bad4aa;
+  color: #222222;
+  border: #222222 solid 2px;
+}
+.btn:active {
+  background: #fafafa;
+  color: #222222;
+  border: #222222 solid 2px;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: -5px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #222222;
+}
+
+/*Accordion styles*/
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  background-color: #fafafa;
+  border: 2px solid #222222;
+  border-radius: 0.25em;
+  position: relative;
+  margin: 2px 0 0 0;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  font-size: 100%;
+}
+
+.ui-accordion .ui-accordion-icons {
+  padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+  padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+  padding: 1em 2.2em;
+  border-top: 0;
+  overflow: auto;
+}
+
+.ui-widget {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.ui-widget .ui-widget {
+  font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+.ui-widget.ui-widget-content {
+  border: 1px solid #c5c5c5;
+}
+.ui-widget-content a {
+  color: #333333;
+}
+
+.ui-widget-header {
+  border: 1px solid #dddddd;
+  background: #e9e9e9;
+  color: #333333;
+  font-weight: bold;
+}
+.ui-widget-header a {
+  color: #333333;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  padding: 2.5px;
+  margin: 5px;
+}
+
+.wrap {
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wrap > img {
+  width: 33%;
+  margin: auto;
+}
+
+#lightbox {
+  position: fixed; /* keeps the lightbox window in the current viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(34, 34, 34, 0.95);
+  text-align: center;
+}
+#lightbox p {
+  text-align: right;
+  color: #fafafa;
+  margin-right: 1em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#lightbox img {
+  box-shadow: 0 0 25px #111111;
+  max-width: 60%;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  font-style: italic;
+  text-align: center;
+  padding: 1em;
+}
+
+@media (min-width: 35em) {
+  .site-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #cccccc; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0.25em;
+  }
+}
+
+@media (min-width: 50em) {
+  .site-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #cccccc; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0.25em;
+  }
+}
